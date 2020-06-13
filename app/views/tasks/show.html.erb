@@ -1,0 +1,10 @@
+<h1><%= @task.title %></h1>
+
+<div class="card border rounded mx-3 p-3"><%= @task.details %></div>
+
+<input type="checkbox" id="task" name="task" <%= @task.completed ? "checked" : "" %>>
+<%= @task.completed ? "Task is completed!" : "This task has not been completed yet" %>
+
+<%= link_to "Index", "/tasks" %>
+
+<%= link_to "Edit this task", "/tasks/#{@task.id}/edit" %>
