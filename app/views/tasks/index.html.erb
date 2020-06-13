@@ -6,10 +6,10 @@
       <li>
         <input type="checkbox" id="task" name="task" <%= task.completed ? "checked" : "" %>>
         <label for="task"><%= link_to task.title, "/tasks/#{task.id}" %></label>
-        <%= link_to "Delete this task", "/tasks/#{task.id}", method: :delete %>
+        <%= link_to "🗑", "/tasks/#{task.id}", method: :delete %>
       </li>
     <% end %>
   </ul>
 </div>
 
-<%= link_to "+ Add a new task", "/tasks/new" %>
+<%= link_to "+ Add a new task", new_task_path %>

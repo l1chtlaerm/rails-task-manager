@@ -5,6 +5,7 @@
 <input type="checkbox" id="task" name="task" <%= @task.completed ? "checked" : "" %>>
 <%= @task.completed ? "Task is completed!" : "This task has not been completed yet" %>
 
+<br>
 <%= link_to "Index", "/tasks" %>
-
+<br>
 <%= link_to "Edit this task", "/tasks/#{@task.id}/edit" %>
